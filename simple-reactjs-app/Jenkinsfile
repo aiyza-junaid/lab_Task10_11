@@ -22,17 +22,11 @@ pipeline {
 
         stage('Run Docker Image') {
             steps {
-                bat 'docker run -d -p 8080:80 your-image-name'
+                bat 'docker run -d -p 3000:11 your-image-name'
             }
         }
 
-        stage('Push Docker Image') {
-            steps {
-                withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
-                    bat 'docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD'
-                    bat 'docker push your-docker-hub-username/your-image-name'
-                }
-            }
+       
         }
     }
 }
