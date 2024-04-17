@@ -1,7 +1,7 @@
 
 FROM node:14-alpine
 
-WORKDIR /app
+WORKDIR /lab_Task10_11/simple-reactjs-app
 
 COPY package*.json ./
 
