@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/aiyza-junaid/lab_Task10_11.git'
+                git branch: 'main', url: 'https://github.com/aiyza-junaid/lab_Task10_11.git'
             }
         }
 
